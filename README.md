@@ -29,6 +29,26 @@ func main() {
 }
 ```
 
+#### GetEntryFromMAC
+```go
+package main
+
+import (
+  "fmt"
+  "github.com/ItsJimi/go-arp"
+)
+
+func main() {
+  entry, err := arp.GetEntryFromMAC("00:00:00:00:00:00")
+  if err != nil {
+    fmt.Println(err)
+    return
+   }
+
+  fmt.Println(entry.IPAddress)
+}
+```
+
 ## Contribute
 Feel free to fork and make pull requests
 
