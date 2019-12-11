@@ -1,3 +1,4 @@
+// Package arp parse ARP file from /proc/net/arp
 package arp
 
 import (
