@@ -23,7 +23,7 @@ func GetEntries() ([]Entry, error) {
 		return nil, err
 	}
 
-	var entries []Entry
+	entries := []Entry{}
 	datas := strings.Split(string(fileDatas), "\n")
 	for i, data := range datas {
 		if i == 0 || data == "" {
