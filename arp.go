@@ -1,6 +1,7 @@
 package arp
 
 import (
+	"errors"
 	"io/ioutil"
 	"strings"
 )
@@ -40,6 +41,22 @@ func GetEntries() ([]Entry, error) {
 	}
 
 	return entries, nil
+}
+
+// GetEntryFromMAC get an entry by searching with MAC address
+func GetEntryFromMAC(mac string) (Entry, error) {
+	entries, err := GetEntries()
+	if err != nil {
+		return Entry{}, err
+	}
+
+	for _, entry := range entries {
+		if entry.HWAddress == mac {
+			return entry, nil
+		}
+	}
+
+	return Entry{}, errors.New("MAC address not found")
 }
 
 func removeWhiteSpace(tab []string) []string {
