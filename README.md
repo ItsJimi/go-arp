@@ -1,5 +1,5 @@
 # go-arp
-[![godoc](https://godoc.org/github.com/ItsJimi/go-arp?status.svg)](https://godoc.org/github.com/ItsJimi/go-arp)
+[![go reference](https://pkg.go.dev/badge/github.com/ItsJimi/go-arp)](https://pkg.go.dev/github.com/ItsJimi/go-arp)
 
 Parse ARP file from `/proc/net/arp`
 
