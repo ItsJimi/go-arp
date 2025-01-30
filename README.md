@@ -5,7 +5,7 @@ Parse ARP file from `/proc/net/arp`
 
 ## Install
 ```shell
-go get -u github.com/itsjimi/go-arp
+go get -u github.com/ItsJimi/go-arp
 ```
 
 ## Example
